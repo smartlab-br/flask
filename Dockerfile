@@ -4,7 +4,8 @@ LABEL maintainer="smartlab-dev@mpt.mp.br"
 # ENV PYTHONPATH /app:/usr/lib/python3.8/site-packages
 COPY requirements.txt /app/requirements.txt
 
-RUN apt-get update && \
+RUN apt-get update  && \
+    apt-get upgrade -y  && \
     apt-get install -y build-essential gcc && \
     pip3 install -r /app/requirements.txt && \
     mkdir -p /var/run/flask && \
