@@ -6,7 +6,7 @@ COPY requirements.txt /app/requirements.txt
 
 RUN apt-get update  && \
     apt-get upgrade -y  && \
-    apt-get install -y build-essential gcc && \
+    apt-get install -y build-essential gcc libpcre3 libpcre3-dev && \
     pip3 install -r /app/requirements.txt && \
     mkdir -p /var/run/flask && \
     groupadd -r uwsgi && useradd -r -g uwsgi uwsgi && \
