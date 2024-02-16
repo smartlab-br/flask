@@ -1,4 +1,4 @@
-FROM python:3.9.6-slim
+FROM python:3.10-slim
 LABEL maintainer="smartlab-dev@mpt.mp.br"
 
 # ENV PYTHONPATH /app:/usr/lib/python3.8/site-packages
